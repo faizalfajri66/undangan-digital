@@ -1,0 +1,229 @@
+/* CSS Global */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-image: url('../ornament/background-pattern.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Container Utama */
+.undangan-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Ornamen pada Header */
+h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #8e44ad;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+h2::before,
+h2::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url('../ornament/flower-icon.png');
+    background-size: cover;
+    background-position: center;
+}
+
+h2::before {
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+h2::after {
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Mempelai */
+.mempelai {
+    margin-bottom: 30px;
+}
+
+.mempelai img {
+    width: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.mempelai p {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+/* Detail Acara */
+.detail-acara {
+    margin-top: 30px;
+}
+
+.detail-acara p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Galeri */
+.galeri {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.galeri img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Cerita Cinta Kami */
+.cerita-cinta {
+    background-color: #fffaf0;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.cerita-cinta h3 {
+    color: #c0392b;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Konfirmasi Kehadiran */
+.konfirmasi-kehadiran-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 40px;
+    background-image: url('{{ asset('assets/background.png') }}');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 60px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+.konfirmasi-kehadiran-section form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.konfirmasi-kehadiran-section form input,
+.konfirmasi-kehadiran-section form textarea,
+.konfirmasi-kehadiran-section form button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+}
+
+.konfirmasi-kehadiran-section form button {
+    background-color: #007bff;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.konfirmasi-kehadiran-section form button:hover {
+    background-color: #0056b3;
+}
+
+.konfirmasi-kehadiran-section h3 {
+    margin-top: 40px;
+    color: #333;
+}
+
+.konfirmasi-kehadiran-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.konfirmasi-kehadiran-section li {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.konfirmasi-kehadiran-section li strong {
+    display: block;
+    font-size: 1.1em;
+    color: #222;
+}
+
+.konfirmasi-kehadiran-section li em {
+    display: block;
+    color: #555;
+    margin-top: 5px;
+}
+
+.konfirmasi-kehadiran-section p {
+    font-size: 1em;
+    color: #999;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .undangan-container {
+        padding: 20px;
+    }
+
+    .mempelai img {
+        width: 120px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .detail-acara p,
+    .cerita-cinta p {
+        font-size: 16px;
+    }
+
+    .konfirmasi-kehadiran-section form input,
+    .konfirmasi-kehadiran-section form textarea,
+    .konfirmasi-kehadiran-section form button {
+        font-size: 1em;
+    }
+
+    h2::before,
+    h2::after {
+        width: 20px;
+        height: 20px;
+    }
+
+    h2::before {
+        left: -25px;
+    }
+
+    h2::after {
+        right: -25px;
+    }
+}
