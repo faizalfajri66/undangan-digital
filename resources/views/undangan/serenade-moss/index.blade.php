@@ -37,10 +37,11 @@
 
     {{-- Musik background --}}
     @if($undangan->musik)
-        <audio autoplay loop hidden>
-            <source src="{{ asset('storage/' . $undangan->musik) }}" type="audio/mp3">
-        </audio>
+    <audio id="musikUndangan" autoplay loop hidden>
+        <source src="{{ asset('assets/' . $undangan->musik) }}" type="audio/mpeg">
+    </audio>
     @endif
+
 
     {{-- Header --}}
     <section id="home">
@@ -86,11 +87,6 @@
     <section id="ayat">
         @include('undangan.serenade-moss._ayat', ['undangan' => $undangan])
     </section>
-
-    {{-- Musik background --}}
-    <audio id="musikUndangan" autoplay loop>
-        <source src="{{ asset('storage/musik/musik_1.mp3') }}" type="audio/mpeg">
-    </audio>
 
     <script>
     document.addEventListener("DOMContentLoaded", () => {
