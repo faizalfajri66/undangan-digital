@@ -8,13 +8,11 @@ use Illuminate\Http\Request;
 
 class UndanganController extends Controller
 {
-    public function show($slug, Request $request)
+    public function show($template, $slug, Request $request)
     {
         $undangan = Undangan::where('slug', $slug)->firstOrFail();
         $namaTamu = $request->query('nama');
         $rsvps = $undangan->rsvps;
-    
-        // Ambil musik dari relasi one-to-one
         $music = $undangan->music;
     
         // Fallback ke kolom musik lama (jika ada)
@@ -27,8 +25,14 @@ class UndanganController extends Controller
             $music = (object) ['file' => 'musik/musik_1.mp3'];
         }
     
-        return view("undangan.{$slug}.index", compact('undangan', 'namaTamu', 'rsvps', 'music'));
-    }    
+        // Cek apakah template ada view-nya
+        if (!view()->exists("undangan.$template.index")) {
+            abort(404, 'Template tidak ditemukan.');
+        }
+    
+        return view("undangan.$template.index", compact('undangan', 'namaTamu', 'rsvps', 'music'));
+    }
+    
 
     public function store(Request $request)
     {
