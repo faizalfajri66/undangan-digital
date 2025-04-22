@@ -13,7 +13,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::resource('love-story', \App\Http\Controllers\Admin\LoveStoryController::class);
     Route::resource('ucapan', \App\Http\Controllers\Admin\UcapanController::class);
 });
-Route::get('/r/{template}/{slug}', [UndanganController::class, 'show'])->name('undangan.show');
+Route::get('/undangan/{slug}', [UndanganController::class, 'show'])->name('undangan.show');
 Route::post('/rsvp/{slug}', [RsvpController::class, 'store'])->name('rsvp.store');
 Route::get('/admin/rsvp/{slug}', [RsvpController::class, 'index'])->name('rsvp.index');
 
