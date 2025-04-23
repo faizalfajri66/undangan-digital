@@ -7,28 +7,28 @@
 {{-- Layar Pembuka --}}
 <div 
     id="openingScreen" 
-    class="fixed inset-0 bg-cover bg-center z-50 flex flex-col items-center justify-center text-center p-6 transition-all duration-700 ease-in-out"
+    class="fixed inset-0 bg-cover bg-center z-50 flex flex-col items-center justify-center text-center p-4 sm:p-6 transition-all duration-700 ease-in-out"
     style="background-image: url('{{ asset('assets/cover.jpg') }}');"
 >
     <div 
         id="openingContent"
-        class="max-w-md bg-white/80 backdrop-blur-md p-6 rounded-xl shadow-lg transform transition duration-500 scale-90 opacity-0"
+        class="w-full max-w-sm sm:max-w-md md:max-w-lg bg-white/80 backdrop-blur-md p-4 sm:p-6 rounded-xl shadow-lg transform transition duration-500 scale-90 opacity-0"
     >
         @if ($namaTamu)
-            <p class="text-gray-800 text-lg mb-4 italic drop-shadow-sm animate__animated animate__fadeInDown">
+            <p class="text-gray-800 text-base sm:text-lg mb-4 italic drop-shadow-sm animate__animated animate__fadeInDown">
                 Yth. Bapak/Ibu/Saudara/i
                 <br>
-                <span class="text-2xl font-bold text-[#0469db]">{{ $namaTamu }}</span>
+                <span class="text-xl sm:text-2xl font-bold text-[#0469db]">{{ $namaTamu }}</span>
             </p>
         @endif
 
-        <h1 class="text-xl md:text-2xl font-semibold text-[#0469db] mb-4 animate__animated animate__fadeInUp">
+        <h1 class="text-lg sm:text-xl md:text-2xl font-semibold text-[#0469db] mb-4 animate__animated animate__fadeInUp">
             Kami mengundang Anda untuk hadir dalam acara pernikahan kami
         </h1>
 
         <button
             id="openInvitationBtn"
-            class="px-6 py-3 bg-[#0469db] hover:bg-[#01206e] text-white text-lg font-semibold rounded-full shadow-md transition-all animate__animated animate__zoomIn"
+            class="px-4 py-2 sm:px-6 sm:py-3 bg-[#0469db] hover:bg-[#01206e] text-white text-base sm:text-lg font-semibold rounded-full shadow-md transition-all animate__animated animate__zoomIn"
         >
             Buka Undangan
         </button>
