@@ -7,7 +7,7 @@
 {{-- Layar Pembuka --}}
 <div 
     id="openingScreen" 
-    class="fixed inset-0 bg-cover bg-center z-50 flex flex-col items-center justify-center text-center p-4 sm:p-6 transition-all duration-700 ease-in-out"
+    class="fixed top-0 left-0 w-screen h-screen bg-cover bg-center z-50 flex flex-col items-center justify-center text-center p-4 sm:p-6 transition-all duration-700 ease-in-out"
     style="background-image: url('{{ asset('assets/cover.jpg') }}');"
 >
     <div 
