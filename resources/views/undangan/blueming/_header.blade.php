@@ -13,9 +13,12 @@
             Undangan Pernikahan
         </h2>
 
-        <h1 class="text-4xl md:text-6xl font-serif text-white font-bold leading-tight drop-shadow-lg transition-all duration-700">
-            {{ $undangan->nama_pria }} <span class="text-pink-200">&amp;</span> {{ $undangan->nama_wanita }}
+        <h1 class="text-4xl md:text-6xl font-serif text-white font-bold leading-tight drop-shadow-lg transition-all duration-700 text-center">
+            {{ $undangan->nama_wanita }} <br>
+            <span class="text-pink-200 text-3xl md:text-5xl block leading-none">&amp;</span>
+            <span class="text-3xl md:text-5xl">{{ $undangan->nama_pria }}</span>
         </h1>
+
 
         @if ($namaTamu)
             <p class="text-white text-lg mt-6 italic drop-shadow-sm">
