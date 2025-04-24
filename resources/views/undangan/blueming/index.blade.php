@@ -5,71 +5,35 @@
 @section('content')
 
 {{-- Layar Pembuka --}}
-<!-- CSS agar screen penuh & scroll off -->
-<style>
-    html.no-scroll, body.no-scroll {
-        overflow: hidden;
-        height: 100%;
-    }
-
-    #openingScreen {
-        height: 100vh;
-    }
-</style>
-
-<!-- Script buka undangan -->
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        // Disable scroll
-        document.body.classList.add('no-scroll');
-        document.documentElement.classList.add('no-scroll');
-
-        const openingScreen = document.getElementById("openingScreen");
-        const openBtn = document.getElementById("openInvitationBtn");
-        const navbar = document.getElementById("mainNavbar");
-
-        if (navbar) navbar.style.display = "none";
-
-        openBtn.addEventListener("click", () => {
-            // Hilangkan opening screen
-            openingScreen.style.display = "none";
-
-            // Aktifkan scroll
-            document.body.classList.remove('no-scroll');
-            document.documentElement.classList.remove('no-scroll');
-
-            // Tampilkan navbar
-            if (navbar) navbar.style.display = "block";
-        });
-    });
-</script>
-
-<!-- Opening screen full height -->
 <div 
     id="openingScreen" 
-    class="fixed inset-0 bg-cover bg-center z-50 flex items-center justify-center p-6 transition-all duration-700 ease-in-out"
-    style="background-image: url('{{ asset('assets/cover.jpg') }}'); height: 100vh;"
+    class="fixed inset-0 bg-cover bg-center z-50 flex items-center justify-center p-4 sm:p-6 transition-all duration-700 ease-in-out"
+    style="background-image: url('{{ asset('assets/cover.jpg') }}');"
 >
-    <div class="w-full max-w-md bg-white/80 backdrop-blur-md p-6 rounded-xl shadow-lg text-center">
+    <div 
+        id="openingContent"
+        class="w-full max-w-md bg-white/80 backdrop-blur-md p-6 rounded-xl shadow-lg text-center transform transition duration-500 scale-90 opacity-0"
+    >
         @if ($namaTamu)
-            <p class="text-gray-800 text-lg mb-4 italic">
+            <p class="text-gray-800 text-base sm:text-lg mb-4 italic">
                 Yth. Bapak/Ibu/Saudara/i<br>
                 <span class="text-2xl font-bold text-[#0469db]">{{ $namaTamu }}</span>
             </p>
         @endif
 
-        <h1 class="text-xl md:text-2xl font-semibold text-[#0469db] mb-4">
+        <h1 class="text-lg sm:text-xl md:text-2xl font-semibold text-[#0469db] mb-4">
             Kami mengundang Anda untuk hadir dalam acara pernikahan kami
         </h1>
 
         <button
             id="openInvitationBtn"
-            class="px-6 py-3 bg-[#0469db] hover:bg-[#01206e] text-white text-lg font-semibold rounded-full shadow-md transition-all"
+            class="px-6 py-3 bg-[#0469db] hover:bg-[#01206e] text-white text-base sm:text-lg font-semibold rounded-full shadow-md transition-all"
         >
             Buka Undangan
         </button>
     </div>
 </div>
+
 
 
     {{-- Musik background --}}
