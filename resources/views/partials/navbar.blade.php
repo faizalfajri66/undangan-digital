@@ -1,5 +1,5 @@
 <!-- Sticky Navbar with Animation -->
-<nav class="fixed bottom-0 md:top-0 md:bottom-auto left-0 right-0 bg-white/90 backdrop-blur-md shadow-lg z-50">
+<nav id="mainNavbar" class="fixed bottom-0 md:top-0 md:bottom-auto left-0 right-0 bg-white/90 backdrop-blur-md shadow-lg z-50">
     <div class="flex justify-around md:justify-center md:gap-12 py-3 px-4">
         <a href="#home" class="group flex flex-col items-center text-sm text-gray-500 hover:text-[#c0392b] transition-all duration-300">
             <svg class="w-6 h-6 mb-1 group-hover:scale-110 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
