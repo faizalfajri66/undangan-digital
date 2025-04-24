@@ -5,14 +5,19 @@
 @section('content')
 
 {{-- Layar Pembuka --}}
-<!-- Hide scroll saat opening screen -->
+<!-- CSS agar screen penuh & scroll off -->
 <style>
-    body.no-scroll, html.no-scroll {
+    html.no-scroll, body.no-scroll {
         overflow: hidden;
         height: 100%;
     }
+
+    #openingScreen {
+        height: 100vh;
+    }
 </style>
 
+<!-- Script buka undangan -->
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         // Disable scroll
@@ -23,32 +28,29 @@
         const openBtn = document.getElementById("openInvitationBtn");
         const navbar = document.getElementById("mainNavbar");
 
-        // Hide navbar at start
         if (navbar) navbar.style.display = "none";
 
         openBtn.addEventListener("click", () => {
-            // Remove opening screen
+            // Hilangkan opening screen
             openingScreen.style.display = "none";
 
-            // Enable scroll
+            // Aktifkan scroll
             document.body.classList.remove('no-scroll');
             document.documentElement.classList.remove('no-scroll');
 
-            // Show navbar
+            // Tampilkan navbar
             if (navbar) navbar.style.display = "block";
         });
     });
 </script>
 
-<!-- Opening Screen -->
+<!-- Opening screen full height -->
 <div 
     id="openingScreen" 
-    class="fixed inset-0 bg-cover bg-center z-50 flex items-center justify-center p-4 transition-all duration-700 ease-in-out"
-    style="background-image: url('{{ asset('assets/cover.jpg') }}');"
+    class="fixed inset-0 bg-cover bg-center z-50 flex items-center justify-center p-6 transition-all duration-700 ease-in-out"
+    style="background-image: url('{{ asset('assets/cover.jpg') }}'); height: 100vh;"
 >
-    <div 
-        class="w-full max-w-lg bg-white/80 backdrop-blur-md p-6 rounded-xl shadow-lg text-center"
-    >
+    <div class="w-full max-w-md bg-white/80 backdrop-blur-md p-6 rounded-xl shadow-lg text-center">
         @if ($namaTamu)
             <p class="text-gray-800 text-lg mb-4 italic">
                 Yth. Bapak/Ibu/Saudara/i<br>
@@ -68,6 +70,7 @@
         </button>
     </div>
 </div>
+
 
     {{-- Musik background --}}
     @if($undangan->musik)
