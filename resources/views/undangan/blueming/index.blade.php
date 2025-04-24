@@ -5,6 +5,13 @@
 @section('content')
 
 {{-- Layar Pembuka --}}
+<style>
+    body.no-scroll, html.no-scroll {
+        overflow: hidden;
+        height: 100%;
+    }
+</style>
+
 <div 
     id="openingScreen" 
     class="fixed top-0 left-0 w-screen h-screen bg-cover bg-center z-50 flex flex-col items-center justify-center text-center p-4 sm:p-6 transition-all duration-700 ease-in-out"
@@ -34,6 +41,28 @@
         </button>
     </div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Disable scroll saat halaman dibuka
+        document.body.classList.add('no-scroll');
+        document.documentElement.classList.add('no-scroll');
+
+        // Saat tombol diklik, hilangkan layar pembuka & aktifkan scroll
+        document.getElementById("openInvitationBtn").addEventListener("click", () => {
+            document.getElementById("openingScreen").style.display = "none";
+            document.body.classList.remove('no-scroll');
+            document.documentElement.classList.remove('no-scroll');
+        });
+
+        // Fade-in animasi konten
+        setTimeout(() => {
+            document.getElementById("openingContent").classList.remove("scale-90", "opacity-0");
+            document.getElementById("openingContent").classList.add("scale-100", "opacity-100");
+        }, 100);
+    });
+</script>
+
 
     {{-- Musik background --}}
     @if($undangan->musik)
