@@ -11,8 +11,9 @@
 
     <!-- Tanggal Acara -->
     <p class="text-2xl font-bold mb-4 animate__animated animate__fadeIn animate__delay-1s">
-        {{ $undangan->tanggal_acara->format('l, j F Y') }}
+        {{ \Carbon\Carbon::parse($undangan->tanggal_acara)->translatedFormat('l, j F Y') }}
     </p>
+
 
     <!-- Countdown Timer -->
     <div class="grid grid-cols-4 gap-2 justify-center items-center text-center max-w-md mx-auto animate__animated animate__fadeIn animate__delay-3s">
