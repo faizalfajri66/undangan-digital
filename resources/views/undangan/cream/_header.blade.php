@@ -27,7 +27,7 @@
         <h1 class="text-5xl md:text-7xl font-bold leading-tight text-white drop-shadow-xl tracking-wider mt-2"
             style="font-family: 'Great Vibes', cursive;"
             data-aos="zoom-in-up" data-aos-delay="600">
-            {{ $undangan->nama_pria }}
+            {{ $undangan->nama_wanita }}
         </h1>
 
         <!-- Simbol & -->
@@ -41,7 +41,7 @@
         <h1 class="text-5xl md:text-7xl font-bold leading-tight text-white drop-shadow-xl tracking-wider"
             style="font-family: 'Great Vibes', cursive;"
             data-aos="zoom-in-up" data-aos-delay="800">
-            {{ $undangan->nama_wanita }}
+            {{ $undangan->nama_pria }}
         </h1>
 
         <!-- Garis pemisah -->
