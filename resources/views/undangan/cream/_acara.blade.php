@@ -48,25 +48,62 @@
         </div>
 
         <!-- Google Maps -->
-<!-- Google Maps -->
-<!-- @if($undangan->link_maps)
-    <div class="mt-12">
-        <div class="bg-white/70 backdrop-blur-md shadow-lg ring-2 ring-pink-300 rounded-xl max-w-3xl mx-auto p-6">
-            <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4 flex items-center justify-center gap-2">
+        <div class="mt-12">
+    <div class="bg-white/70 backdrop-blur-md shadow-lg ring-2 ring-pink-300 rounded-xl max-w-3xl mx-auto p-6">
+        <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4 text-center">
             Lokasi Acara
-            </h3>
-            <div class="overflow-hidden rounded-lg shadow-md">
-                <iframe 
-                    src="{{ $undangan->link_maps }}"
-                    width="100%" height="300"
-                    class="w-full h-72 border-0 rounded-md"
-                    allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
-            </div>
+        </h3>
+
+        <!-- Peta Langsung -->
+        <div id="map" class="w-full h-72 rounded-md"></div>
+
+            <!-- Tombol ke Google Maps -->
+            <div class="text-center mb-4">
+            <a 
+                href="https://www.google.com/maps?q=-4.6446875,119.5725156" 
+                target="_blank"
+                class="inline-block bg-pink-500 hover:bg-yellow-600 text-white font-semibold px-4 py-2 rounded-lg"
+            >
+                Buka di Google Maps
+            </a>
         </div>
     </div>
-@endif
+</div>
 
-    </div>
-</div> -->
+<!-- Leaflet & OSRM -->
+<link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+<script>
+    const map = L.map('map').setView([-4.6446875, 119.5725156], 16); // Pusatkan ke lokasi acara
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap'
+    }).addTo(map);
+
+    // Tandai lokasi acara
+    const eventLocation = L.latLng(-4.6446875, 119.5725156);
+    L.marker(eventLocation).addTo(map).bindPopup('Lokasi Acara').openPopup();
+
+    // Jika ingin tambahkan rute dari lokasi pengguna
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            const userLocation = L.latLng(position.coords.latitude, position.coords.longitude);
+
+            L.Routing.control({
+                waypoints: [userLocation, eventLocation],
+                router: new L.Routing.OSRMv1({
+                    serviceUrl: 'https://router.project-osrm.org/route/v1'
+                }),
+                createMarker: function () { return null; },
+                lineOptions: {
+                    styles: [{ color: 'pink', weight: 5 }]
+                }
+            }).addTo(map);
+        });
+    }
+</script>

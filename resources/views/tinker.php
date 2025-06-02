@@ -22,3 +22,15 @@ DB::table('undangans')->insert([
     'created_at' => now(),
     'updated_at' => now(),
 ]);
+
+Update
+DB::table('undangans')
+    ->where('slug', 'andi-dan-sinta')
+    ->update([
+        'ayah_pria' => 'Muh. Tang',
+        'ibu_pria' => 'Rusmiati',
+        'ayah_wanita' => 'Azis',
+        'ibu_wanita' => 'Nurwana',
+        'musik' => 'musik_1.mp3',
+        'updated_at' => now(),
+    ]);
