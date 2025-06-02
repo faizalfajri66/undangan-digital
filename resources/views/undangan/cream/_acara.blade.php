@@ -88,22 +88,4 @@
     // Tandai lokasi acara
     const eventLocation = L.latLng(-4.6446875, 119.5725156);
     L.marker(eventLocation).addTo(map).bindPopup('Lokasi Acara').openPopup();
-
-    // Jika ingin tambahkan rute dari lokasi pengguna
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-            const userLocation = L.latLng(position.coords.latitude, position.coords.longitude);
-
-            L.Routing.control({
-                waypoints: [userLocation, eventLocation],
-                router: new L.Routing.OSRMv1({
-                    serviceUrl: 'https://router.project-osrm.org/route/v1'
-                }),
-                createMarker: function () { return null; },
-                lineOptions: {
-                    styles: [{ color: 'pink', weight: 5 }]
-                }
-            }).addTo(map);
-        });
-    }
 </script>
