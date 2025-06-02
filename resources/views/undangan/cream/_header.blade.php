@@ -1,4 +1,4 @@
-<div class="relative w-full text-center py-32 md:py-48 bg-cover shadow-2xl overflow-hidden"
+<div class="relative w-full text-center py-20 md:py-40 bg-cover shadow-2xl overflow-hidden"
      style="background-image: url('{{ asset('assets/cream_1.jpg') }}'); background-blend-mode: overlay;">
 
     <!-- Ornamen bunga kanan atas -->
@@ -19,8 +19,7 @@
 
         <!-- Subjudul -->
         <h2 class="text-sm md:text-base tracking-widest uppercase text-white font-light drop-shadow-md mb-2"
-            data-aos="fade-in" data-aos-delay="500"
-            style="font-family: 'Great Vibes', cursive;">
+            data-aos="fade-in" data-aos-delay="500">
             Undangan Pernikahan
         </h2>
 
