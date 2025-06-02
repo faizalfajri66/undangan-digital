@@ -24,7 +24,7 @@
         </h2>
 
         <!-- Nama mempelai pria -->
-        <h1 class="text-5xl md:text-7xl font-bold leading-tight text-white drop-shadow-xl tracking-wider mt-2"
+        <h1 class="text-3xl md:text-5xl font-bold leading-tight text-white drop-shadow-xl tracking-wider mt-2"
             style="font-family: 'Great Vibes', cursive;"
             data-aos="zoom-in-up" data-aos-delay="600">
             {{ $undangan->nama_wanita }}
@@ -38,7 +38,7 @@
         </h1>
 
         <!-- Nama mempelai wanita -->
-        <h1 class="text-5xl md:text-7xl font-bold leading-tight text-white drop-shadow-xl tracking-wider"
+        <h1 class="text-3xl md:text-5xl font-bold leading-tight text-white drop-shadow-xl tracking-wider"
             style="font-family: 'Great Vibes', cursive;"
             data-aos="zoom-in-up" data-aos-delay="800">
             {{ $undangan->nama_pria }}

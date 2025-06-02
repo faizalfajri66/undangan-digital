@@ -13,11 +13,13 @@
                 <div class="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden shadow-xl ring-4 ring-blue-400">
                     <img src="{{ asset('assets/calon_wanita.jpg') }}" alt="Mempelai wanita" class="object-cover w-full h-full" />
                 </div>
-                <p class="mt-4 text-3xl md:text-4xl font-[Great Vibes] text-[#8b322c]">
+                <p class="mt-4 text-3xl md:text-4xl font-[Great Vibes] text-[#8b322c]"
+                    style="font-family: 'Great Vibes', cursive;"
+                    data-aos="zoom-in-up" data-aos-delay="800">
                     {{ $undangan->nama_wanita }}
                 </p>
                 <p class="mt-1 text-sm md:text-base italic text-center leading-snug">
-                    Putra dari<br>
+                    Putri dari<br>
                     Bapak {{ $undangan->ayah_wanita }} & Ibu {{ $undangan->ibu_wanita }}
                 </p>
             </div>
@@ -32,11 +34,13 @@
                 <div class="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden shadow-xl ring-4 ring-pink-400">
                     <img src="{{ asset('assets/calon_pria.jpg') }}" alt="Mempelai pria" class="object-cover w-full h-full" />
                 </div>
-                <p class="mt-4 text-3xl md:text-4xl font-[Great Vibes] text-[#8b322c]">
+                <p class="mt-4 text-3xl md:text-4xl font-[Great Vibes] text-[#8b322c]"
+                    style="font-family: 'Great Vibes', cursive;"
+                    data-aos="zoom-in-up" data-aos-delay="800">
                     {{ $undangan->nama_pria }}
                 </p>
                 <p class="mt-1 text-sm md:text-base italic text-center leading-snug">
-                    Putri dari<br>
+                    Putra dari<br>
                     Bapak {{ $undangan->ayah_pria }} & Ibu {{ $undangan->ibu_pria }}
                 </p>
             </div>
