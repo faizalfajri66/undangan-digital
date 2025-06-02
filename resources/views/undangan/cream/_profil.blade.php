@@ -1,13 +1,13 @@
 <div class="relative bg-cover bg-center py-20 px-4 text-center" style="background-image: url('{{ asset('assets/cream_2.jpg') }}');">
-    <!-- Overlay ringan -->
-    <div class="absolute inset-0 bg-gradient-to-b from-white/70 via-white/40 to-white/10"></div>
+    <!-- Overlay lembut -->
+    <div class="absolute inset-0 bg-gradient-to-b from-white/70 via-white/50 to-white/20 backdrop-blur-sm"></div>
 
     <div class="relative z-10 max-w-5xl mx-auto">
         <h2 
             class="text-2xl md:text-3xl font-semibold text-gray-800 mb-12 tracking-wide"
             data-aos="fade-up"
         >
-            Kedua Mempelai
+            Mempelai yang Berbahagia
         </h2>
 
         <div class="flex flex-col md:flex-row items-center justify-center md:gap-20 gap-12">
@@ -21,8 +21,8 @@
                 </div>
                 <p class="mt-4 text-lg md:text-xl font-bold">{{ $undangan->nama_pria }}</p>
                 <p class="mt-1 text-sm md:text-base italic text-center leading-snug">
-                    Putra dari Bapak {{ $undangan->ayah_pria }}<br>
-                    dan Ibu {{ $undangan->ibu_pria }}
+                    Putra dari<br>
+                    Bapak {{ $undangan->ayah_pria }} & Ibu {{ $undangan->ibu_pria }}
                 </p>
             </div>
 
@@ -45,8 +45,8 @@
                 </div>
                 <p class="mt-4 text-lg md:text-xl font-bold">{{ $undangan->nama_wanita }}</p>
                 <p class="mt-1 text-sm md:text-base italic text-center leading-snug">
-                    Putri dari Bapak {{ $undangan->ayah_wanita }}<br>
-                    dan Ibu {{ $undangan->ibu_wanita }}
+                    Putri dari<br>
+                    Bapak {{ $undangan->ayah_wanita }} & Ibu {{ $undangan->ibu_wanita }}
                 </p>
             </div>
         </div>
