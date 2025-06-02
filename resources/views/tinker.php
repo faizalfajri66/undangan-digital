@@ -25,12 +25,11 @@ DB::table('undangans')->insert([
 
 Update
 DB::table('undangans')
-    ->where('slug', 'andi-dan-sinta')
+    ->where('slug', 'cream')
     ->update([
-        'ayah_pria' => 'Muh. Tang',
-        'ibu_pria' => 'Rusmiati',
-        'ayah_wanita' => 'Azis',
-        'ibu_wanita' => 'Nurwana',
-        'musik' => 'musik_1.mp3',
-        'updated_at' => now(),
+        'rekening_nama' => 'Ade Putri Weliana',
+        'rekening_bank' => 'BRI',
+        'rekening_nomor' => '509601030539534',
+        'lokasi' => 'Bontomatene, Kec. Segeri, Kab. Pangkep',
     ]);
+
