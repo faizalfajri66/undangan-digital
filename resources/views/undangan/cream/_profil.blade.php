@@ -3,7 +3,7 @@
     <div class="absolute inset-0 bg-gradient-to-b from-white/70 via-white/50 to-white/20 backdrop-blur-sm"></div>
 
     <div class="relative z-10 max-w-5xl mx-auto">
-        <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-12 tracking-wide" data-aos="fade-up">
+        <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-12 tracking-wide" style="font-family: 'Great Vibes', cursive;" data-aos="fade-up">
             Mempelai yang Berbahagia
         </h2>
 
@@ -14,8 +14,7 @@
                     <img src="{{ asset('assets/calon_wanita.jpg') }}" alt="Mempelai wanita" class="object-cover w-full h-full" />
                 </div>
                 <p class="mt-4 text-3xl md:text-4xl font-[Great Vibes] text-[#8b322c]"
-                    style="font-family: 'Great Vibes', cursive;"
-                    data-aos="zoom-in-up" data-aos-delay="800">
+                    style="font-family: 'Great Vibes', cursive;">
                     {{ $undangan->nama_wanita }}
                 </p>
                 <p class="mt-1 text-sm md:text-base italic text-center leading-snug">
@@ -35,8 +34,7 @@
                     <img src="{{ asset('assets/calon_pria.jpg') }}" alt="Mempelai pria" class="object-cover w-full h-full" />
                 </div>
                 <p class="mt-4 text-3xl md:text-4xl font-[Great Vibes] text-[#8b322c]"
-                    style="font-family: 'Great Vibes', cursive;"
-                    data-aos="zoom-in-up" data-aos-delay="800">
+                    style="font-family: 'Great Vibes', cursive;">
                     {{ $undangan->nama_pria }}
                 </p>
                 <p class="mt-1 text-sm md:text-base italic text-center leading-snug">

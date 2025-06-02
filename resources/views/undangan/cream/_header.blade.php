@@ -1,4 +1,4 @@
-<div class="relative w-full text-center py-24 bg-cover shadow-2xl overflow-hidden"
+<div class="relative w-full text-center py-32 md:py-48 bg-cover shadow-2xl overflow-hidden"
      style="background-image: url('{{ asset('assets/cream_1.jpg') }}'); background-blend-mode: overlay;">
 
     <!-- Ornamen bunga kanan atas -->
@@ -19,12 +19,13 @@
 
         <!-- Subjudul -->
         <h2 class="text-sm md:text-base tracking-widest uppercase text-white font-light drop-shadow-md mb-2"
-            data-aos="fade-in" data-aos-delay="500">
+            data-aos="fade-in" data-aos-delay="500"
+            style="font-family: 'Great Vibes', cursive;">
             Undangan Pernikahan
         </h2>
 
         <!-- Nama mempelai pria -->
-        <h1 class="text-3xl md:text-5xl font-bold leading-tight text-white drop-shadow-xl tracking-wider mt-2"
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight text-white drop-shadow-xl tracking-wider mt-2"
             style="font-family: 'Great Vibes', cursive;"
             data-aos="zoom-in-up" data-aos-delay="600">
             {{ $undangan->nama_wanita }}
@@ -38,7 +39,7 @@
         </h1>
 
         <!-- Nama mempelai wanita -->
-        <h1 class="text-3xl md:text-5xl font-bold leading-tight text-white drop-shadow-xl tracking-wider"
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight text-white drop-shadow-xl tracking-wider"
             style="font-family: 'Great Vibes', cursive;"
             data-aos="zoom-in-up" data-aos-delay="800">
             {{ $undangan->nama_pria }}
