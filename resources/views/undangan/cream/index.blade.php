@@ -27,7 +27,7 @@
         @endif
 
         <h1 
-            class="text-xl md:text-2xl font-medium text-[#3e3e3e] mb-6 animate__animated animate__fadeInUp leading-relaxed">
+            class="text-gray-800 text-base md:text-lg font-light mb-4 italic animate__animated animate__fadeInDown">
             Dengan penuh kebahagiaan, kami mengundang Anda untuk hadir dalam acara pernikahan kami
         </h1>
 
