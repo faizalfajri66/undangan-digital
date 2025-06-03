@@ -3,7 +3,8 @@
     style="background-image: url('{{ asset('assets/cream_3.jpg') }}'); background-size: cover; background-position: center;"
 >
     <div class="max-w-4xl mx-auto">
-        <h2 class="text-2xl md:text-3xl font-semibold text-brown-800 mb-12 tracking-wider">Susunan Acara</h2>
+        <h2 class="text-2xl md:text-3xl font-semibold text-brown-800 mb-12 tracking-wider"
+        style="font-family: 'Great Vibes', cursive;">Susunan Acara</h2>
 
         <!-- Grid -->
         <div class="flex flex-col md:flex-row items-center justify-center gap-10 bg-white/80 rounded-xl p-6 shadow-lg backdrop-blur-sm ring-1 ring-yellow-300">

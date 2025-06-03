@@ -27,8 +27,7 @@
         @endif
 
         <h1 
-            class="text-xl md:text-2xl font-medium text-[#3e3e3e] mb-6 animate__animated animate__fadeInUp leading-relaxed"
-            style="font-family: 'Playfair Display', serif;">
+            class="text-xl md:text-2xl font-medium text-[#3e3e3e] mb-6 animate__animated animate__fadeInUp leading-relaxed">
             Dengan penuh kebahagiaan, kami mengundang Anda untuk hadir dalam acara pernikahan kami
         </h1>
 
