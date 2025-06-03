@@ -26,10 +26,10 @@
             </p>
         @endif
 
-        <h1 
+        <p 
             class="text-gray-800 text-base md:text-lg font-light mb-4 italic animate__animated animate__fadeInDown">
             Dengan penuh kebahagiaan, kami mengundang Anda untuk hadir dalam acara pernikahan kami
-        </h1>
+</p>
 
         <button
             id="openInvitationBtn"
