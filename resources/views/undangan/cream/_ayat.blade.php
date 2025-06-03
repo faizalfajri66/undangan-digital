@@ -1,12 +1,23 @@
 @if($undangan->quote)
-    <div class="text-center my-20 px-6">
-        <blockquote class="text-xl md:text-2xl italic text-gray-800 border-l-4 border-pink-500 pl-6 py-6 mx-auto max-w-3xl bg-white/70 backdrop-blur-sm rounded-xl shadow-sm">
+    <div class="relative bg-[#fdf1e6] py-24 px-6 text-center overflow-hidden">
+        <!-- Ornamen blur artistik -->
+        <div class="absolute -top-10 -left-10 w-40 h-40 bg-[#fcd5ce] rounded-full blur-2xl opacity-30"></div>
+        <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-[#faedcd] rounded-full blur-2xl opacity-30"></div>
+
+        <!-- Box Ayat -->
+        <blockquote class="text-xl md:text-2xl italic text-[#5c4033] border-l-4 border-[#e3b778] pl-6 pr-4 py-6 mx-auto max-w-3xl bg-white/80 backdrop-blur-lg rounded-xl shadow-md leading-relaxed tracking-wide">
             “{{ $undangan->quote }}”
         </blockquote>
+
         @if($undangan->sumber_quote)
-            <p class="text-sm text-gray-600 mt-4 italic">— {{ $undangan->sumber_quote }}</p>
+            <p class="text-sm text-[#7c5f44] mt-4 italic">— {{ $undangan->sumber_quote }}</p>
         @endif
+
+        <!-- Spacer tambahan -->
+        <div class="mt-24"></div>
     </div>
 @else
-    <p class="text-center text-lg text-gray-500 mt-10 italic">Ayat suci akan segera ditambahkan 🙏</p>
+    <div class="bg-[#fdf1e6] py-20 px-6 text-center">
+        <p class="text-lg text-[#9c7a6e] italic">Ayat suci akan segera ditambahkan 🙏</p>
+    </div>
 @endif
