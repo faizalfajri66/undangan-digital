@@ -1,4 +1,4 @@
-<div class="relative w-full text-center py-20 md:py-40 bg-cover shadow-2xl overflow-hidden"
+<div class="relative w-full text-center min-h-[75vh] bg-cover bg-center shadow-2xl overflow-hidden flex items-center justify-center"
      style="background-image: url('{{ asset('assets/cream_1.jpg') }}'); background-blend-mode: overlay;">
 
     <!-- Ornamen bunga kanan atas -->
