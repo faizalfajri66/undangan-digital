@@ -30,6 +30,7 @@ class UndanganController extends Controller
         return view("undangan.{$slug}.index", compact('undangan', 'namaTamu', 'rsvps', 'music'));
     }    
 
+
     public function store(Request $request)
     {
         $undangan = new Undangan();

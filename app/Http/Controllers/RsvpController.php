@@ -28,27 +28,22 @@ class RsvpController extends Controller
 
     public function store(Request $request, $slug)
     {
-        // Validasi input
         $request->validate([
-            'nama' => 'required|string|max:255',
-            'pesan' => 'nullable|string',
+            'nama' => 'required|max:255',
+            'pesan' => 'nullable|max:1000',
         ]);
-
-        // Cari undangan berdasarkan slug
-        $undangan = Undangan::where('slug', $slug)->first();
-
-        if ($undangan) {
-            // Menyimpan data RSVP dengan undangan_id
-            Rsvp::create([
-                'nama' => $request->nama,
-                'pesan' => $request->pesan,
-                'undangan_id' => $undangan->id,
-            ]);
-
-            return redirect()->route('undangan.show', ['slug' => $slug])
-                             ->with('success', 'Terima kasih atas kehadirannya!');
-        }
-
-        return redirect()->route('home')->with('error', 'Undangan tidak ditemukan');
-    }
-}
+    
+        $undangan = Undangan::where('slug', $slug)->firstOrFail();
+    
+        $rsvp = Rsvp::create([
+            'nama' => $request->nama,
+            'pesan' => $request->pesan,
+            'undangan_id' => $undangan->id,
+        ]);
+    
+        return response()->json([
+            'message' => 'Ucapan berhasil dikirim!',
+            'rsvp' => $rsvp
+        ]);
+    }    
+}    

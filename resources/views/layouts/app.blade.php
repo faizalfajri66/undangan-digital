@@ -6,6 +6,8 @@
     <title>@yield('title', 'Undangan Pernikahan')</title>
     <!-- AOS CSS -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     {{-- Google Fonts --}}
     <!-- Tambahkan di <head> untuk font sambung -->
@@ -20,9 +22,11 @@
 
     {{-- CSS dasar --}}
     <style>
-        body {
+        html, body {
             margin: 0;
             padding: 0;
+            width: 100%;
+            overflow-x: hidden;
             font-family: 'Open Sans', sans-serif;
             background-color: #f9f9f9;
             color: #333;
@@ -30,11 +34,6 @@
 
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
         }
     </style>
 

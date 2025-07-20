@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Pagination\Paginator;
+use Carbon\Carbon;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +21,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        \Carbon\Carbon::setLocale('id');
+        // Set locale untuk Carbon
+        Carbon::setLocale('id');
+
+        // Gunakan Tailwind sebagai default pagination
+        Paginator::useTailwind();
     }
 }

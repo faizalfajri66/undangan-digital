@@ -7,6 +7,7 @@ use App\Http\Controllers\UndanganPublicController;
 use App\Http\Controllers\MusicController;
 
 Route::post('/rsvp', [RsvpController::class, 'store'])->name('rsvp.store');
+
 Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::resource('undangan', \App\Http\Controllers\Admin\UndanganController::class);
     Route::resource('galeri', \App\Http\Controllers\Admin\GaleriController::class);
