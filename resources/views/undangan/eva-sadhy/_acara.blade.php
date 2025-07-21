@@ -29,7 +29,7 @@
                 <!-- Info Acara -->
                 <div class="flex-1 text-left space-y-3 text-pink-900">
                     <p class="text-center mt-4 text-lg md:text-xl font-medium">
-                        Waktu: <span class="text-pink-600 font-semibold">{{ \Carbon\Carbon::parse($undangan->tanggal_acara)->format('H:i') }} WIB</span>
+                        Waktu: <span class="text-pink-600 font-semibold">{{ \Carbon\Carbon::parse($undangan->tanggal_acara)->format('H:i') }} WITA</span>
                     </p>
                     <p class="text-base md:text-lg">
                         Lokasi: <br>
@@ -74,7 +74,7 @@
                 <!-- Info Acara -->
                 <div class="flex-1 text-left space-y-3 text-pink-900">
                     <p class="text-center mt-4 text-lg md:text-xl font-medium">
-                        Waktu: <span class="text-pink-600 font-semibold">{{ \Carbon\Carbon::parse($undangan->tanggal_resepsi)->format('H:i') }} WIB</span>
+                        Waktu: <span class="text-pink-600 font-semibold">{{ \Carbon\Carbon::parse($undangan->tanggal_resepsi)->format('H:i') }} WITA</span>
                     </p>
                     <p class="text-base md:text-lg">
                         Lokasi: <br>
