@@ -18,12 +18,10 @@
     <div class="relative z-10 px-4 md:px-6 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="400">
 
         <!-- Subjudul -->
-        <h2 class="text-base md:text-lg text-pink-200 drop-shadow-md mb-2"
-            style="font-family: 'Great Vibes', cursive;"
+        <h2 class="text-sm md:text-base tracking-widest uppercase text-white font-light drop-shadow-md mb-2"
             data-aos="fade-in" data-aos-delay="500">
             Undangan Pernikahan
         </h2>
-
 
         <!-- Nama mempelai pria -->
         <h1 class="text-4xl md:text-6xl font-bold leading-tight text-white drop-shadow-xl tracking-wider mt-2"
