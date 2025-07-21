@@ -46,7 +46,7 @@ DB::table('undangans')->insert([
     'ayah_pria' => 'Drs. Ardi Arafah',
     'ayah_wanita' => 'H.Abd.Kadir (alm)',
     'ibu_wanita' => 'Hj.Mastura (almh)',
-    'ibu_pria' => 'Dra. Rosnawati Bakri',
+    'ibu_pria' => 'Dra. Rosnawati Bakri',
     'rekening_nama' => 'Eva Desmyra'
     'rekening_bank' => 'BRI',
     'rekening_nomor' => '501401029416539',
@@ -55,14 +55,18 @@ DB::table('undangans')->insert([
 ]);
 
 Update
-DB::table('undangans')
-    ->where('slug', 'cream')
-    ->update([
-        'rekening_nama' => 'Ade Putri Weliana',
-        'rekening_bank' => 'BRI',
-        'rekening_nomor' => '509601030539534',
-        'lokasi' => 'Bontomatene, Kec. Segeri, Kab. Pangkep',
-    ]);
+$u = App\Models\Undangan::where('slug', 'eva-sadhy')->first();
+$u->rekening_nama = 'Eva Desmyra';
+$u->rekening_bank = 'BRI';
+$u->rekening_nomor = '501401029416539';
+$u->tanggal_resepsi = '2025-08-09 10:00:00';
+$u->lokasi_resepsi = 'BTN Ujung Bulu Permai Blok A4. No.7, Kab. Bulukumba';
+$u->ayah_pria = 'Drs. Ardi Arafah';
+$u->ayah_wanita = 'H.Abd.Kadir (alm)';
+$u->ibu_wanita = 'Hj.Mastura (almh)';
+$u->ibu_pria = 'Dra. Rosnawati Bakri';
+$u->save();
+
 
 Hapus 
 App\Models\Rsvp::where('id', 29)->delete();
@@ -78,33 +82,43 @@ use App\Models\Galeri;
 
 // Contoh: Tambahkan 3 foto untuk undangan_id = 1
 Galeri::create([
-    'undangan_id' => 5,
+    'undangan_id' => 1,
+    'gambar' => 'eva-sadhy_1.jpg'
+]);
+
+Galeri::create([
+    'undangan_id' => 1,
+    'gambar' => 'eva-sadhy_2.jpg'
+]);
+
+Galeri::create([
+    'undangan_id' => 1,
+    'gambar' => 'eva-sadhy_3.jpg'
+]);
+
+Galeri::create([
+    'undangan_id' => 1,
     'gambar' => 'eva-sadhy_4.jpg'
 ]);
 
 Galeri::create([
-    'undangan_id' => 5,
+    'undangan_id' => 1,
     'gambar' => 'eva-sadhy_5.jpg'
 ]);
 
 Galeri::create([
-    'undangan_id' => 5,
+    'undangan_id' => 1,
     'gambar' => 'eva-sadhy_6.jpg'
 ]);
 
 Galeri::create([
-    'undangan_id' => 5,
+    'undangan_id' => 1,
     'gambar' => 'eva-sadhy_17.jpg'
 ]);
 
 Galeri::create([
-    'undangan_id' => 5,
+    'undangan_id' => 1,
     'gambar' => 'eva-sadhy_18.jpg'
-]);
-
-Galeri::create([
-    'undangan_id' => 5,
-    'gambar' => 'eva-sadhy_19.jpg'
 ]);
 
 
@@ -112,22 +126,19 @@ Love story
 use App\Models\LoveStory;
 
 LoveStory::create([
-    'undangan_id' => 5,
+    'undangan_id' => 1,
     'judul' => 'First Chapter : Encounter',
     'cerita' => 'Tidak ada suatu kebetulan di dunia ini, semua sudah tersusun rapih oleh sang maha kuasa. Siapa sangka berawal dari hobi bermain game, sebuah pertemuan biasa justru menjadi awal dari kisah luar biasa.',
-    'tanggal' => '2020-01-01',
 ]);
 
 LoveStory::create([
-    'undangan_id' => 5,
+    'undangan_id' => 1,
     'judul' => 'Second Chapter : Destiny',
     'cerita' => 'Seiring berjalannya waktu, mulai dari obrolan ringan hingga diskusi mendalam, kami menemukan bahwa kami saling melengkapi. Setiap langkah dalam perjalanan takdir ini, telah membawa kami lebih dekat satu sama lain.',
-    'tanggal' => '2021-01-01',
 ]);
 
 LoveStory::create([
-    'undangan_id' => 5,
+    'undangan_id' => 1,
     'judul' => 'Final Chapter : Forever Start Here',
     'cerita' => 'Percayalah, bukan karena bertemu lalu berjodoh tapi karena berjodohlah kami di pertemukan. Dengan penuh rasa syukur, kami ingin merayakan cinta kami di hari yang istimewa. Tepat pada tanggal 2 agustus 2025 kami akan melangsungkan pernikahan. Cinta yang sakral, cinta yang bermuara pada cinta-Nya. Semoga Allah swt. Senantiasa memberkahi pernikahan ini. Aamiin... Mohon doa baiknya untuk kami:) #forEVArwithSADHY',
-    'tanggal' => '2025-08-02',
 ]);
