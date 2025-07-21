@@ -1,3 +1,32 @@
+Membuat 
+use App\Models\Undangan;
+
+Undangan::create([
+    'slug' => 'eva-sadhy',
+    'nama_undangan' => 'Eva & Sadhy',
+    'nama_pria' => 'Ahmad Rosady Ardi (Sadhy)',
+    'nama_wanita' => 'Eva Desmyra, S.T (Eva)',
+    'foto_pria' => 'https://example.com/images/andi.jpg',
+    'foto_wanita' => 'https://example.com/images/sinta.jpg',
+    'kata_pengantar' => 'Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan pernikahan putra-putri kami.',
+    'tanggal_acara' => '2025-08-09 10:00:00',
+    'lokasi' => 'BTN Ujung Bulu Permai Blok A4. No.7, Kab. Bulukumba',
+    'link_maps' => 'https://www.google.com/maps/embed?pb=...',
+    'musik' => 'https://example.com/audio/love_song.mp3',
+    'cover' => 'https://example.com/images/cover_wedding.jpg',
+    'template' => 'classic-elegant',
+    'quote' => 'Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup agar kamu merasa tenteram di sampingnya.',
+    'sumber_quote' => 'QS. Ar-Rum: 21',
+    'ayah_pria' => 'Drs. Ardi Arafah',
+    'ibu_pria' => 'Dra. Rosnawati Bakri',
+    'ayah_wanita' => 'H. Abd. Kadir (alm)',
+    'ibu_wanita' => 'Hj. Mastura (almh)',
+    'rekening_nama' => 'Eva Desmyra',
+    'rekening_bank' => 'BRI',
+    'rekening_nomor' => '501401029416539',
+]);
+
+menambahkan
 DB::table('undangans')->insert([
     'slug' => 'eva-sadhy',
     'nama_undangan' => 'Eva & Sadhy',
@@ -8,16 +37,17 @@ DB::table('undangans')->insert([
     'kata_pengantar' => 'Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan pernikahan putra-putri kami.',
     'tanggal_acara' => '2025-08-09 10:00:00',
     'lokasi' => 'BTN Ujung Bulu Permai Blok A4. No.7, Kab. Bulukumba',
-    'link_maps' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.1642245710536!2d120.21051240000001!3d-5.5426509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbbff7f15555555%3A0xde55b9ffc998d665!2sBTN%20Ujung%20Bulu!5e0!3m2!1sen!2sid!4v1752756961801!5m2!1sen!2sid',
+    'link_maps' => 'https://maps.google.com/?q=Gedung+Serbaguna+Cempaka,+Jakarta+Selatan',
     'musik' => 'https://example.com/audio/love_song.mp3',
     'cover' => 'https://example.com/images/cover_wedding.jpg',
     'template' => 'classic-elegant',
-    'quote' => 'Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup agar kamu merasa tenteram di sampingnya.',
-    'sumber_quote' => 'QS. Ar-Rum: 21',
+    'quote' => 'Cinta sejati adalah ketika kamu tetap mencintainya meski dalam keadaan yang paling sulit.',
+    'sumber_quote' => 'Anonim',
     'ayah_pria' => 'Drs. Ardi Arafah',
     'ayah_wanita' => 'H.Abd.Kadir (alm)',
     'ibu_wanita' => 'Hj.Mastura (almh)',
     'ibu_pria' => 'Dra. Rosnawati Bakri',
+    'rekening_nama' => 'Eva Desmyra'
     'rekening_bank' => 'BRI',
     'rekening_nomor' => '501401029416539',
     'created_at' => now(),

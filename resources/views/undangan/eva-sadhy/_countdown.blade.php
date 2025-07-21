@@ -4,7 +4,7 @@
     <h3 class="text-xl md:text-2xl font-semibold tracking-wider mb-4"
         style="font-family: 'Great Vibes', cursive;"
         data-aos="fade-down" data-aos-delay="300">
-        Menuju Hari Bahagia
+        Menuju Akad Nikah
     </h3>
 
     <!-- Gambar -->
