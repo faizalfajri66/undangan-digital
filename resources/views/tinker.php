@@ -28,8 +28,8 @@ Undangan::create([
 
 menambahkan
 DB::table('undangans')->insert([
-    'slug' => 'eva-sadhy',
-    'nama_undangan' => 'Eva & Sadhy',
+    'slug' => 'black',
+    'nama_undangan' => 'black',
     'nama_pria' => 'Ahmad Rosady Ardi (Sadhy)',
     'nama_wanita' => 'Eva Desmyra, S.T (Eva)',
     'foto_pria' => 'https://example.com/images/andi.jpg',
@@ -67,6 +67,8 @@ $u->ibu_wanita = 'Hj.Mastura (almh)';
 $u->ibu_pria = 'Dra. Rosnawati Bakri';
 $u->save();
 
+$u = App\Models\Undangan::where('slug', 'eva-sadhy')->first();
+$u->musik = 'lagu123.mp3';
 
 Hapus 
 App\Models\Rsvp::where('id', 29)->delete();
