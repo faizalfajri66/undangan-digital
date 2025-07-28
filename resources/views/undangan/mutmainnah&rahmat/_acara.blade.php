@@ -1,7 +1,7 @@
 <div class="relative min-h-screen w-full text-center overflow-hidden">
     <!-- Gambar latar belakang -->
     <img 
-        src="{{ asset('assets/black_02.jpg') }}" 
+        src="{{ asset('assets/background_black.jpg') }}" 
         class="absolute inset-0 w-full h-full object-cover z-0" 
         alt="Background" />
 
