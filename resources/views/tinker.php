@@ -2,7 +2,7 @@ Membuat
 use App\Models\Undangan;
 
 Undangan::create([
-    'slug' => 'mutaminnah&rahmat',
+    'slug' => 'mutminnah&rahmat',
     'nama_undangan' => 'mutmainnnah&rahmat',
     'nama_pria' => 'Rahmat',
     'nama_wanita' => 'Mutmainnah',
@@ -28,41 +28,36 @@ Undangan::create([
 
 menambahkan
 DB::table('undangans')->insert([
-    'slug' => 'black',
-    'nama_undangan' => 'black',
-    'nama_pria' => 'Ahmad Rosady Ardi (Sadhy)',
-    'nama_wanita' => 'Eva Desmyra, S.T (Eva)',
+    'slug' => 'mutaminnah&rahmat',
+    'nama_undangan' => 'mutmainnnah&rahmat',
+    'nama_pria' => 'Rahmat',
+    'nama_wanita' => 'Mutmainnah',
     'foto_pria' => 'https://example.com/images/andi.jpg',
     'foto_wanita' => 'https://example.com/images/sinta.jpg',
     'kata_pengantar' => 'Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan pernikahan putra-putri kami.',
-    'tanggal_acara' => '2025-08-09 10:00:00',
-    'lokasi' => 'BTN Ujung Bulu Permai Blok A4. No.7, Kab. Bulukumba',
-    'link_maps' => 'https://maps.google.com/?q=Gedung+Serbaguna+Cempaka,+Jakarta+Selatan',
-    'musik' => 'https://example.com/audio/love_song.mp3',
+    'tanggal_acara' => '2025-08-04 10:00:00',
+    'lokasi' => 'Bontomatene, Kel. Segeri, Kec. Segeri',
+    'link_maps' => 'https://www.google.com/maps/embed?pb=...',
+    'musik' => 'musik_1.mp3',
     'cover' => 'https://example.com/images/cover_wedding.jpg',
     'template' => 'classic-elegant',
-    'quote' => 'Cinta sejati adalah ketika kamu tetap mencintainya meski dalam keadaan yang paling sulit.',
-    'sumber_quote' => 'Anonim',
-    'ayah_pria' => 'Drs. Ardi Arafah',
-    'ayah_wanita' => 'H.Abd.Kadir (alm)',
-    'ibu_wanita' => 'Hj.Mastura (almh)',
-    'ibu_pria' => 'Dra. Rosnawati Bakri',
-    'rekening_nama' => 'Eva Desmyra'
+    'quote' => 'Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup agar kamu merasa tenteram di sampingnya.',
+    'sumber_quote' => 'QS. Ar-Rum: 21',
+    'ayah_pria' => 'Sakkatang',
+    'ibu_pria' => 'Sani',
+    'ayah_wanita' => 'Iwan',
+    'ibu_wanita' => 'Amina',
+    'rekening_nama' => 'Mutmainnah',
     'rekening_bank' => 'BRI',
-    'rekening_nomor' => '501401029416539',
+    'rekening_nomor' => '123456789',
 ]);
 
 Update
-$u = App\Models\Undangan::where('slug', 'eva-sadhy')->first();
-$u->rekening_nama = 'Eva Desmyra';
-$u->rekening_bank = 'BRI';
-$u->rekening_nomor = '501401029416539';
-$u->tanggal_resepsi = '2025-08-09 10:00:00';
-$u->lokasi_resepsi = 'BTN Ujung Bulu Permai Blok A4. No.7, Kab. Bulukumba';
-$u->ayah_pria = 'Drs. Ardi Arafah';
-$u->ayah_wanita = 'H.Abd.Kadir (alm)';
-$u->ibu_wanita = 'Hj.Mastura (almh)';
-$u->ibu_pria = 'Dra. Rosnawati Bakri';
+$u = App\Models\Undangan::where('slug', 'mutmainnah&rahmat')->first();
+$u->ayah_pria = 'Sakkatang';
+$u->ayah_wanita = 'Sani';
+$u->ibu_wanita = 'Iwan';
+$u->ibu_pria = 'Amina';
 $u->save();
 
 $u = App\Models\Undangan::where('slug', 'eva-sadhy')->first();

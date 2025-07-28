@@ -1,6 +1,6 @@
 <div 
-    class="relative bg-white/70 backdrop-blur-md py-20 px-4 text-center"
-    style="background-image: url('{{ asset('assets/black_02.jpg') }}'); background-size: cover; background-position: center;"
+    class="relative min-h-screen bg-white/70 backdrop-blur-md py-20 px-4 text-center"
+    style="background-image: url('{{ asset('assets/black_02.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"
 >
     <div class="max-w-4xl mx-auto">
         <h2 class="text-2xl md:text-3xl font-semibold text-white mb-12 tracking-wider"
