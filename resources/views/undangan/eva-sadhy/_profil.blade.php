@@ -22,13 +22,6 @@
                     Bapak {{ $undangan->ayah_pria }} & Ibu {{ $undangan->ibu_pria }}
                 </p>
             </div>
-            <div class="mt-6">
-                    <a href="https://www.instagram.com/rosadhy_26?igsh=N2picDY5bTBzdWd3"
-                    class="inline-block bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-6 rounded-full shadow-lg transition duration-300 ease-in-out">
-                        Instagram
-                    </a>
-            </div>
-            
 
             <!-- Tanda & -->
             <div class="text-5xl md:text-7xl font-serif text-gray-600 select-none leading-none" data-aos="zoom-in" data-aos-delay="200">
@@ -48,12 +41,6 @@
                     Putri dari<br>
                     Bapak {{ $undangan->ayah_wanita }} & Ibu {{ $undangan->ibu_wanita }}
                 </p>
-                <div class="mt-6">
-                    <a href="https://www.instagram.com/evadesmyra?igsh=N3g2b3hjN3Ewejhj" target="_blank"
-                    class="inline-block bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-6 rounded-full shadow-lg transition duration-300 ease-in-out">
-                        Instagram
-                    </a>
-                </div>
             </div>
         </div>
     </div>
