@@ -55,9 +55,9 @@ DB::table('undangans')->insert([
 Update
 $u = App\Models\Undangan::where('slug', 'mutmainnah&rahmat')->first();
 $u->ayah_pria = 'Sakkatang';
-$u->ayah_wanita = 'Sani';
+$u->ayah_wanita = 'Amina';
 $u->ibu_wanita = 'Iwan';
-$u->ibu_pria = 'Amina';
+$u->ibu_pria = 'Hapsani';
 $u->save();
 
 $u = App\Models\Undangan::where('slug', 'eva-sadhy')->first();
