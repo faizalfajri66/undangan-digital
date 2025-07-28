@@ -47,17 +47,17 @@
 @endif
 
 {{-- Konten Undangan --}}
-<section id="home">@include('undangan.black._header', ['undangan' => $undangan])</section>
-<section id="ayat">@include('undangan.black._ayat', ['undangan' => $undangan])</section>
-<section id="section">@include('undangan.black._section', ['tanggal' => $undangan->tanggal_acara])</section>
-<section id="countdown">@include('undangan.black._countdown', ['tanggal' => $undangan->tanggal_acara])</section>
-<section id="mempelai">@include('undangan.black._profil', ['undangan' => $undangan])</section>
-<section id="acara">@include('undangan.black._acara', ['undangan' => $undangan])</section>
-<!-- <section id="love-story">@include('undangan.black._love_story', ['undangan' => $undangan])</section> -->
-<!-- <section id="galeri">@include('undangan.black._galeri', ['undangan' => $undangan])</section> -->
-<section id="amplop">@include('undangan.black._amplop', ['undangan' => $undangan])</section>
-<section id="rsvp">@include('undangan.black._rsvp', ['undangan' => $undangan])</section>
-<section id="footer">@include('undangan.black._footer', ['undangan' => $undangan])</section>
+<section id="home">@include('undangan.mutmainnah&rahmat._header', ['undangan' => $undangan])</section>
+<section id="ayat">@include('undangan.mutmainnah&rahmat._ayat', ['undangan' => $undangan])</section>
+<section id="section">@include('undangan.mutmainnah&rahmat._section', ['tanggal' => $undangan->tanggal_acara])</section>
+<section id="countdown">@include('undangan.mutmainnah&rahmat._countdown', ['tanggal' => $undangan->tanggal_acara])</section>
+<section id="mempelai">@include('undangan.mutmainnah&rahmat._profil', ['undangan' => $undangan])</section>
+<section id="acara">@include('undangan.mutmainnah&rahmat._acara', ['undangan' => $undangan])</section>
+<!-- <section id="love-story">@include('undangan.mutmainnah&rahmat._love_story', ['undangan' => $undangan])</section> -->
+<!-- <section id="galeri">@include('undangan.mutmainnah&rahmat._galeri', ['undangan' => $undangan])</section> -->
+<section id="amplop">@include('undangan.mutmainnah&rahmat._amplop', ['undangan' => $undangan])</section>
+<section id="rsvp">@include('undangan.mutmainnah&rahmat._rsvp', ['undangan' => $undangan])</section>
+<section id="footer">@include('undangan.mutmainnah&rahmat._footer', ['undangan' => $undangan])</section>
 
 {{-- JS: Buka Undangan & Transisi --}}
 <script>
