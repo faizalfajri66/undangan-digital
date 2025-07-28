@@ -1,10 +1,18 @@
-<div 
-    class="relative min-h-screen bg-white/70 backdrop-blur-md py-20 px-4 text-center"
-    style="background-image: url('{{ asset('assets/black_03.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"
->
-    <div class="max-w-4xl mx-auto">
-        <h2 class="text-2xl md:text-3xl font-semibold text-white mb-12 tracking-wider"
-            style="font-family: 'Great Vibes', cursive;">Susunan Acara</h2>
+<div class="relative min-h-screen w-full text-center overflow-hidden">
+    <!-- Gambar latar belakang -->
+    <img 
+        src="{{ asset('assets/black_02.jpg') }}" 
+        class="absolute inset-0 w-full h-full object-cover z-0" 
+        alt="Background" />
+
+    <!-- Overlay opsional -->
+    <div class="absolute inset-0 bg-black/60 z-10"></div>
+
+    <!-- Konten di atas gambar -->
+    <div class="relative z-20 py-20 px-4 max-w-4xl mx-auto text-white">
+        <h2 class="text-2xl md:text-3xl font-semibold mb-12 tracking-wider" style="font-family: 'Great Vibes', cursive;">
+            Susunan Acara
+        </h2>
 
         <!-- Grid -->
         <div class="flex flex-col md:flex-row items-center justify-center gap-10 bg-white/10 rounded-xl p-6 shadow-lg backdrop-blur-sm ring-1 ring-yellow-300">
