@@ -12,7 +12,7 @@
             <!-- Mempelai Pria -->
             <div class="flex flex-col items-center max-w-xs text-gray-800 transition-transform hover:scale-105 duration-300" data-aos="fade-right">
                 <div class="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden shadow-xl ring-4 ring-blue-400">
-                    <img src="{{ asset('assets/sadhy.jpg') }}" alt="Mempelai pria" class="object-cover w-full h-full" />
+                    <img src="{{ asset('assets/calon_pria.jpg') }}" alt="Mempelai pria" class="object-cover w-full h-full" />
                 </div>
                 <p class="mt-4 text-3xl md:text-4xl font-[Great Vibes] text-[#8b322c]" style="font-family: 'Great Vibes', cursive;">
                     {{ $undangan->nama_pria }}
@@ -22,7 +22,7 @@
                     Bapak {{ $undangan->ayah_pria }} & Ibu {{ $undangan->ibu_pria }}
                 </p>
                 <div class="mt-4">
-                    <a href="https://www.instagram.com/rosadhy_26?igsh=N2picDY5bTBzdWd3" target="_blank"
+                    <a href="https://www.instagram.com" target="_blank"
                        class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg transition duration-300 ease-in-out">
                         Instagram
                     </a>
@@ -37,7 +37,7 @@
             <!-- Mempelai Wanita -->
             <div class="flex flex-col items-center max-w-xs text-gray-800 transition-transform hover:scale-105 duration-300" data-aos="fade-left">
                 <div class="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden shadow-xl ring-4 ring-pink-400">
-                    <img src="{{ asset('assets/eva.jpg') }}" alt="Mempelai wanita" class="object-cover w-full h-full" />
+                    <img src="{{ asset('assets/calon_wanita.jpg') }}" alt="Mempelai wanita" class="object-cover w-full h-full" />
                 </div>
                 <p class="mt-4 text-3xl md:text-4xl font-[Great Vibes] text-[#8b322c]" style="font-family: 'Great Vibes', cursive;">
                     {{ $undangan->nama_wanita }}
@@ -47,7 +47,7 @@
                     Bapak {{ $undangan->ayah_wanita }} & Ibu {{ $undangan->ibu_wanita }}
                 </p>
                 <div class="mt-4">
-                    <a href="https://www.instagram.com/evadesmyra?igsh=N3g2b3hjN3Ewejhj" target="_blank"
+                    <a href="https://www.instagram.com/" target="_blank"
                        class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg transition duration-300 ease-in-out">
                         Instagram
                     </a>

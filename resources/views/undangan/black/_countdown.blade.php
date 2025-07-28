@@ -10,8 +10,8 @@
     <!-- Gambar -->
     <div class="flex justify-center mb-6"
          data-aos="zoom-in" data-aos-delay="400">
-        <img src="{{ asset('assets/eva-sadhy_3.jpg') }}" alt="Count_Down"
-             class="w-32 h-32 md:w-40 md:h-40 rounded-full shadow-lg ring-4 ring-white object-cover" />
+        <img src="{{ asset('assets/count_down.png') }}" alt="Count_Down"
+             class="w-32 h-32 md:w-40 md:h-40 bg-white rounded-full shadow-lg ring-4 ring-white object-cover" />
     </div>
 
     <!-- Tanggal Acara -->

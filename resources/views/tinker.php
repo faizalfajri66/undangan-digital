@@ -2,7 +2,7 @@ Membuat
 use App\Models\Undangan;
 
 Undangan::create([
-    'slug' => 'eva-sadhy',
+    'slug' => 'black',
     'nama_undangan' => 'Eva & Sadhy',
     'nama_pria' => 'Ahmad Rosady Ardi (Sadhy)',
     'nama_wanita' => 'Eva Desmyra, S.T (Eva)',
@@ -50,8 +50,6 @@ DB::table('undangans')->insert([
     'rekening_nama' => 'Eva Desmyra'
     'rekening_bank' => 'BRI',
     'rekening_nomor' => '501401029416539',
-    'created_at' => now(),
-    'updated_at' => now(),
 ]);
 
 Update
