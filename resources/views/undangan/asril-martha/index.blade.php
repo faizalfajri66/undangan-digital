@@ -47,17 +47,17 @@
 @endif
 
 {{-- Konten Undangan --}}
-<section id="home">@include('undangan.mutmainnah&rahmat._header', ['undangan' => $undangan])</section>
-<section id="ayat">@include('undangan.mutmainnah&rahmat._ayat', ['undangan' => $undangan])</section>
-<section id="section">@include('undangan.mutmainnah&rahmat._section', ['tanggal' => $undangan->tanggal_acara])</section>
-<section id="countdown">@include('undangan.mutmainnah&rahmat._countdown', ['tanggal' => $undangan->tanggal_acara])</section>
-<section id="mempelai">@include('undangan.mutmainnah&rahmat._profil', ['undangan' => $undangan])</section>
-<section id="acara">@include('undangan.mutmainnah&rahmat._acara', ['undangan' => $undangan])</section>
-<!-- <section id="love-story">@include('undangan.mutmainnah&rahmat._love_story', ['undangan' => $undangan])</section> -->
-<!-- <section id="galeri">@include('undangan.mutmainnah&rahmat._galeri', ['undangan' => $undangan])</section> -->
-<section id="amplop">@include('undangan.mutmainnah&rahmat._amplop', ['undangan' => $undangan])</section>
-<section id="rsvp">@include('undangan.mutmainnah&rahmat._rsvp', ['undangan' => $undangan])</section>
-<section id="footer">@include('undangan.mutmainnah&rahmat._footer', ['undangan' => $undangan])</section>
+<section id="home">@include('undangan.asril_martha._header', ['undangan' => $undangan])</section>
+<section id="ayat">@include('undangan.asril_martha._ayat', ['undangan' => $undangan])</section>
+<section id="section">@include('undangan.asril_martha._section', ['tanggal' => $undangan->tanggal_acara])</section>
+<section id="countdown">@include('undangan.asril_martha._countdown', ['tanggal' => $undangan->tanggal_acara])</section>
+<section id="mempelai">@include('undangan.asril_martha._profil', ['undangan' => $undangan])</section>
+<section id="acara">@include('undangan.asril_martha._acara', ['undangan' => $undangan])</section>
+<!-- <section id="love-story">@include('undangan.asril_martha._love_story', ['undangan' => $undangan])</section> -->
+<!-- <section id="galeri">@include('undangan.asril_martha._galeri', ['undangan' => $undangan])</section> -->
+<section id="amplop">@include('undangan.asril_martha._amplop', ['undangan' => $undangan])</section>
+<section id="rsvp">@include('undangan.asril_martha._rsvp', ['undangan' => $undangan])</section>
+<section id="footer">@include('undangan.asril_martha._footer', ['undangan' => $undangan])</section>
 
 {{-- JS: Buka Undangan & Transisi --}}
 <script>

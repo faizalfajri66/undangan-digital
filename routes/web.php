@@ -6,6 +6,10 @@ use App\Http\Controllers\UndanganController;
 use App\Http\Controllers\UndanganPublicController;
 use App\Http\Controllers\MusicController;
 
+Route::get('/', function () {
+    return view('index');
+});
+
 Route::post('/rsvp', [RsvpController::class, 'store'])->name('rsvp.store');
 
 Route::prefix('admin')->middleware(['auth'])->group(function () {
