@@ -56,40 +56,49 @@
             </div>
         </div>
 
-        <!-- Lokasi Peta -->
-        <div class="mt-12">
-            <div class="bg-white/10 backdrop-blur-sm shadow-xl ring-1 ring-yellow-300 rounded-xl max-w-3xl mx-auto p-6">
-                <h3 class="text-xl md:text-2xl font-semibold text-white mb-4 text-center">
-                    Lokasi Eesepsi
-                </h3>
+<!-- Lokasi Peta -->
+<div class="mt-12">
+    <div class="bg-white/10 backdrop-blur-sm shadow-xl ring-1 ring-yellow-300 rounded-xl max-w-3xl mx-auto p-6">
+        <h3 class="text-xl md:text-2xl font-semibold text-white mb-4 text-center">
+            Lokasi Resepsi
+        </h3>
 
-                <div id="map_2" class="w-full h-72 rounded-md"></div>
+        <div id="map_2" class="w-full h-72 rounded-md"></div>
 
-                <div class="text-center mt-4">
-                    <a 
-                        href="https://www.google.com/maps?q=-4.407984194975246,119.60546372883208" 
-                        target="_blank"
-                        class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-semibold px-5 py-2 rounded-full shadow-md transition"
-                    >
-                        Buka di Google Maps
-                    </a>
-                </div>
-            </div>
+        <div class="text-center mt-4">
+            <a 
+                href="https://www.google.com/maps?q=-4.407984194975246,119.60546372883208" 
+                target="_blank"
+                class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-semibold px-5 py-2 rounded-full shadow-md transition"
+            >
+                Buka di Google Maps
+            </a>
         </div>
     </div>
 </div>
 
-<!-- Leaflet & Routing -->
+<!-- Leaflet -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
 
 <script>
-    const map = L.map('map_2').setView([-4.407984194975246, 119.60546372883208], 16);
+document.addEventListener('DOMContentLoaded', function () {
+    // Koordinat Lokasi
+    const lat = -4.407984194975246;
+    const lng = 119.60546372883208;
+
+    // Inisialisasi Map
+    const map = L.map('map_2').setView([lat, lng], 16);
+
+    // Layer Tile dari OpenStreetMap
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap'
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    const eventLocation = L.latLng(-4.407984194975246, 119.60546372883208);
-    L.marker(eventLocation).addTo(map).bindPopup('Lokasi Resepsi').openPopup();
+    // Marker Lokasi
+    L.marker([lat, lng])
+        .addTo(map)
+        .bindPopup('Lokasi Resepsi')
+        .openPopup();
+});
 </script>
