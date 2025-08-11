@@ -8,7 +8,7 @@
 <div 
     id="openingScreen" 
     class="fixed inset-0 z-50 sm:hidden flex items-center justify-center text-center px-6 bg-cover bg-center bg-no-repeat transition-opacity duration-500"
-    style="background-image: url('{{ asset('assets/background_black.jpg') }}'); background-color: rgba(255, 255, 255, 0.8); background-blend-mode: overlay;"
+    style="background-image: url('{{ asset('assets/asril2.jpg') }}'); background-color: rgba(255, 255, 255, 0.8); background-blend-mode: overlay;"
 >
     <div class="absolute inset-0 bg-black/30"></div>
 
