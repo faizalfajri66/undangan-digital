@@ -20,27 +20,27 @@
             <!-- Tanggal -->
             <div class="flex flex-col items-center text-white">
                 <div class="text-lg md:text-xl font-medium mb-1 tracking-wide">
-                    {{ \Carbon\Carbon::parse($undangan->tanggal_acara)->translatedFormat('l') }}
+                    {{ \Carbon\Carbon::parse($undangan->tanggal_resepsi)->translatedFormat('l') }}
                 </div>
                 <div class="text-6xl md:text-7xl font-extrabold text-yellow-500 leading-none">
-                    {{ \Carbon\Carbon::parse($undangan->tanggal_acara)->format('d') }}
+                    {{ \Carbon\Carbon::parse($undangan->tanggal_resepsi)->format('d') }}
                 </div>
                 <div class="text-xl md:text-2xl font-semibold mt-1 tracking-wide">
-                    {{ \Carbon\Carbon::parse($undangan->tanggal_acara)->translatedFormat('F') }}
+                    {{ \Carbon\Carbon::parse($undangan->tanggal_resepsi)->translatedFormat('F') }}
                 </div>
                 <div class="text-base md:text-lg text-gray-300">
-                    {{ \Carbon\Carbon::parse($undangan->tanggal_acara)->format('Y') }}
+                    {{ \Carbon\Carbon::parse($undangan->tanggal_resepsi)->format('Y') }}
                 </div>
             </div>
 
             <!-- Jam dan Lokasi -->
             <div class="text-center md:text-left space-y-4 text-white">
                 <div class="text-lg md:text-xl font-medium">
-                    Waktu: <span class="text-yellow-400 font-semibold">{{ \Carbon\Carbon::parse($undangan->tanggal_acara)->format('H:i') }} WIB</span>
+                    Waktu: <span class="text-yellow-400 font-semibold">{{ \Carbon\Carbon::parse($undangan->tanggal_resepsi)->format('H:i') }} WIB</span>
                 </div>
                 <div class="text-base md:text-lg leading-relaxed font-normal">
-                    Lokasi Acara: <br>
-                    <span class="text-yellow-400 font-semibold">{{ $undangan->lokasi_acara }}</span>
+                    Lokasi resepsi: <br>
+                    <span class="text-yellow-400 font-semibold">{{ $undangan->lokasi_resepsi }}</span>
                 </div>
 
                 <!-- Tombol Simpan Kalender -->
