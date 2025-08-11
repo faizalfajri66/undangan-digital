@@ -8,7 +8,7 @@ use App\Http\Controllers\UndanganPublicController;
 use App\Http\Controllers\MusicController;
 
 Route::get('/dashboard', function () {
-    return "Selamat datang di dashboard!";
+    return view('layout.admin');
 })->middleware('auth');
 
 
@@ -30,9 +30,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
 Route::get('/undangan/{slug}', [UndanganController::class, 'show'])->name('undangan.show');
 Route::post('/rsvp/{slug}', [RsvpController::class, 'store'])->name('rsvp.store');
 Route::get('/admin/rsvp/{slug}', [RsvpController::class, 'index'])->name('rsvp.index');
-
 Route::get('/music', [MusicController::class, 'index'])->name('music.index');
 Route::post('/music', [MusicController::class, 'store'])->name('music.store');
-
 Route::get('/admin/create', [UndanganController::class, 'create'])->name('undangan.create');
 

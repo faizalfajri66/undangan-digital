@@ -59,7 +59,7 @@
 </head>
 <body class="overflow-x-hidden">
     {{-- Navbar --}}
-    @include('partials.navbar')
+    @include('admin.navbar')
 
     {{-- Konten Halaman --}}
     @yield('content')

@@ -1,3 +1,9 @@
+@extends('layouts.user')
+
+@section('title', 'Admin Undangan Pernikahan')
+
+@section('content')
+
 <form action="{{ route('undangan.store') }}" method="POST" enctype="multipart/form-data" style="max-width: 600px; margin: auto;">
     @csrf
 
@@ -7,7 +13,7 @@
         <label>Slug (contoh: serenade-moss)</label>
         <input type="text" name="slug" required class="form-control">
     </div>
-
+ 
     <div style="margin-bottom: 1rem;">
         <label>Nama Tamu (optional)</label>
         <input type="text" name="nama_tamu" class="form-control">
