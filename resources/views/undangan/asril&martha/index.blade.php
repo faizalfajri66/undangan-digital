@@ -53,8 +53,9 @@
 <section id="countdown">@include('undangan.asril&martha._countdown', ['tanggal' => $undangan->tanggal_acara])</section>
 <section id="mempelai">@include('undangan.asril&martha._profil', ['undangan' => $undangan])</section>
 <section id="acara">@include('undangan.asril&martha._acara', ['undangan' => $undangan])</section>
+<section id="acara2">@include('undangan.asril&martha._acara2', ['undangan' => $undangan])</section>
 <!-- <section id="love-story">@include('undangan.asril&martha._love_story', ['undangan' => $undangan])</section> -->
-<!-- <section id="galeri">@include('undangan.asril&martha._galeri', ['undangan' => $undangan])</section> -->
+<section id="galeri">@include('undangan.asril&martha._galeri', ['undangan' => $undangan])</section>
 <section id="amplop">@include('undangan.asril&martha._amplop', ['undangan' => $undangan])</section>
 <section id="rsvp">@include('undangan.asril&martha._rsvp', ['undangan' => $undangan])</section>
 <section id="footer">@include('undangan.asril&martha._footer', ['undangan' => $undangan])</section>
