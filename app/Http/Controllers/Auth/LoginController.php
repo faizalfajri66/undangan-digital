@@ -13,7 +13,7 @@ class LoginController extends Controller
      */
     public function showLoginForm()
     {
-        return view('auth.login'); // resources/views/auth/login.blade.php
+        return view('login'); // resources/views/auth/login.blade.php
     }
 
     /**

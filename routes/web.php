@@ -7,6 +7,11 @@ use App\Http\Controllers\UndanganController;
 use App\Http\Controllers\UndanganPublicController;
 use App\Http\Controllers\MusicController;
 
+Route::get('/dashboard', function () {
+    return "Selamat datang di dashboard!";
+})->middleware('auth');
+
+
 Route::get('/', function () {
     return view('index');
 });
