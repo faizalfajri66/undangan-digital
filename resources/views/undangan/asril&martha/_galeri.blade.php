@@ -1,5 +1,5 @@
 <div class="text-center my-20 px-4">
-    <h2 class="text-3xl md:text-4xl font-bold text-pink-600 mb-10 tracking-wide font-serif">Galeri Kami</h2>
+    <h2 class="text-3xl md:text-4xl font-bold text-yellow-400 mb-10 tracking-wide font-serif">Galeri Kami</h2>
 
     @if($undangan->galeris->count())
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -14,6 +14,6 @@
             @endforeach
         </div>
     @else
-        <p class="text-pink-400 text-lg mt-6 font-medium">Belum ada foto galeri.</p>
+        <p class="text-yellow-400 text-lg mt-6 font-medium">Belum ada foto galeri.</p>
     @endif
 </div>
