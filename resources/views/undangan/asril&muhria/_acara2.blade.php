@@ -40,7 +40,7 @@
                 </div>
                 <div class="text-base md:text-lg leading-relaxed font-normal">
                     Lokasi Acara: <br>
-                    <span class="text-yellow-400 font-semibold">{{ $undangan->lokasi }}</span>
+                    <span class="text-yellow-400 font-semibold">{{ $undangan->lokasi_acara }}</span>
                 </div>
 
                 <!-- Tombol Simpan Kalender -->
@@ -67,7 +67,7 @@
 
                 <div class="text-center mt-4">
                     <a 
-                        href="https://www.google.com/maps?q=-4.6454558,119.5777604" 
+                        href="https://www.google.com/maps?q=-4.630957664511141,119.58185664371408" 
                         target="_blank"
                         class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-semibold px-5 py-2 rounded-full shadow-md transition"
                     >
@@ -85,11 +85,11 @@
 <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
 
 <script>
-    const map = L.map('map').setView([-4.6446875, 119.5725156], 16);
+    const map = L.map('map').setView([-4.630957664511141, 119.58185664371408], 16);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap'
     }).addTo(map);
 
-    const eventLocation = L.latLng(-4.6446875, 119.5725156);
+    const eventLocation = L.latLng(-4.630957664511141, 119.58185664371408);
     L.marker(eventLocation).addTo(map).bindPopup('Lokasi Acara').openPopup();
 </script>
