@@ -85,11 +85,11 @@
 <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
 
 <script>
-    const map = L.map('map').setView([-4.630957664511141, 119.58185664371408], 16);
+    const map = L.map('map_2').setView([-4.407984194975246, 119.60546372883208], 16);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap'
     }).addTo(map);
 
-    const eventLocation = L.latLng(-4.630957664511141, 119.58185664371408);
+    const eventLocation = L.latLng(-4.407984194975246, 119.60546372883208);
     L.marker(eventLocation).addTo(map).bindPopup('Lokasi Resepsi').openPopup();
 </script>
