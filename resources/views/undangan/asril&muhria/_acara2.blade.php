@@ -67,7 +67,7 @@
 
                 <div class="text-center mt-4">
                     <a 
-                        href="https://www.google.com/maps?q=-4.630957664511141,119.58185664371408" 
+                        href="https://www.google.com/maps?q=-4.407984194975246,119.60546372883208" 
                         target="_blank"
                         class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-semibold px-5 py-2 rounded-full shadow-md transition"
                     >
