@@ -46,7 +46,7 @@
                 <!-- Tombol Simpan Kalender -->
                 <div class="mt-6">
                     <a
-                        href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan {{ urlencode($undangan->nama_pria . ' & ' . $undangan->nama_wanita) }}&dates={{ \Carbon\Carbon::parse($undangan->tanggal_acara)->format('Ymd\THis') }}/{{ \Carbon\Carbon::parse($undangan->tanggal_acara)->addHours(2)->format('Ymd\THis') }}&details={{ urlencode('Lokasi: ' . $undangan->lokasi) }}&sf=true&output=xml"
+                        href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan {{ urlencode($undangan->nama_pria . ' & ' . $undangan->nama_wanita) }}&dates={{ \Carbon\Carbon::parse($undangan->tanggal_resepsi)->format('Ymd\THis') }}/{{ \Carbon\Carbon::parse($undangan->tanggal_resepsi)->addHours(2)->format('Ymd\THis') }}&details={{ urlencode('Lokasi: ' . $undangan->lokasi) }}&sf=true&output=xml"
                         target="_blank"
                         class="inline-block px-6 py-2 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold rounded-full shadow-md transition"
                     >
@@ -60,10 +60,10 @@
         <div class="mt-12">
             <div class="bg-white/10 backdrop-blur-sm shadow-xl ring-1 ring-yellow-300 rounded-xl max-w-3xl mx-auto p-6">
                 <h3 class="text-xl md:text-2xl font-semibold text-white mb-4 text-center">
-                    Lokasi Acara
+                    Lokasi Eesepsi
                 </h3>
 
-                <div id="map" class="w-full h-72 rounded-md"></div>
+                <div id="map_2" class="w-full h-72 rounded-md"></div>
 
                 <div class="text-center mt-4">
                     <a 
@@ -91,5 +91,5 @@
     }).addTo(map);
 
     const eventLocation = L.latLng(-4.630957664511141, 119.58185664371408);
-    L.marker(eventLocation).addTo(map).bindPopup('Lokasi Acara').openPopup();
+    L.marker(eventLocation).addTo(map).bindPopup('Lokasi Resepsi').openPopup();
 </script>
