@@ -12,7 +12,7 @@
             <!-- Mempelai Pria -->
             <div class="flex flex-col items-center max-w-xs text-gray-800 transition-transform hover:scale-105 duration-300" data-aos="fade-right">
                 <div class="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden shadow-xl ring-4 ring-blue-400">
-                    <img src="{{ asset('assets/calon_pria.jpg') }}" alt="Mempelai pria" class="object-cover w-full h-full" />
+                    <img src="{{ asset('assets/asril_foto.jpg') }}" alt="Mempelai pria" class="object-cover w-full h-full" />
                 </div>
                 <p class="mt-4 text-3xl md:text-4xl font-[Great Vibes] text-[#8b322c]" style="font-family: 'Great Vibes', cursive;">
                     {{ $undangan->nama_pria }}
@@ -37,7 +37,7 @@
             <!-- Mempelai Wanita -->
             <div class="flex flex-col items-center max-w-xs text-gray-800 transition-transform hover:scale-105 duration-300" data-aos="fade-left">
                 <div class="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden shadow-xl ring-4 ring-pink-400">
-                    <img src="{{ asset('assets/calon_wanita.jpg') }}" alt="Mempelai wanita" class="object-cover w-full h-full" />
+                    <img src="{{ asset('assets/martha_foto.jpg') }}" alt="Mempelai wanita" class="object-cover w-full h-full" />
                 </div>
                 <p class="mt-4 text-3xl md:text-4xl font-[Great Vibes] text-[#8b322c]" style="font-family: 'Great Vibes', cursive;">
                     {{ $undangan->nama_wanita }}
