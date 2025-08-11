@@ -12,7 +12,7 @@
     </div>
 @endif
 
-<form method="POST" action="{{ url('/login') }}">
+<form method="POST" action="{{ route('login') }}">
     @csrf
     <label>Email</label><br>
     <input type="email" name="email" value="{{ old('email') }}" required><br><br>
