@@ -22,7 +22,7 @@
                     Bapak {{ $undangan->ayah_pria }} & Ibu {{ $undangan->ibu_pria }}
                 </p>
                 <div class="mt-4">
-                    <a href="https://www.instagram.com" target="_blank"
+                    <a href="https://www.instagram.com/martaasril/" target="_blank"
                        class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg transition duration-300 ease-in-out">
                         Instagram
                     </a>
@@ -47,7 +47,7 @@
                     Bapak {{ $undangan->ayah_wanita }} & Ibu {{ $undangan->ibu_wanita }}
                 </p>
                 <div class="mt-4">
-                    <a href="https://www.instagram.com/" target="_blank"
+                    <a href="https://www.instagram.com/mharia021/" target="_blank"
                        class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg transition duration-300 ease-in-out">
                         Instagram
                     </a>

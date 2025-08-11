@@ -1,7 +1,7 @@
 <div class="relative min-h-screen w-full text-center overflow-hidden">
     <!-- Gambar latar belakang -->
     <img 
-        src="{{ asset('assets/background_black.jpg') }}" 
+        src="{{ asset('assets/black_03.jpg') }}" 
         class="absolute inset-0 w-full h-full object-cover z-0" 
         alt="Background" />
 
@@ -11,7 +11,7 @@
     <!-- Konten di atas gambar -->
     <div class="relative z-20 py-20 px-4 max-w-4xl mx-auto text-white">
         <h2 class="text-2xl md:text-3xl font-semibold mb-12 tracking-wider" style="font-family: 'Great Vibes', cursive;">
-            Susunan Acara
+            Resepsi Pernikahan
         </h2>
 
         <!-- Grid -->

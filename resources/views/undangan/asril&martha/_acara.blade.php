@@ -11,7 +11,7 @@
     <!-- Konten di atas gambar -->
     <div class="relative z-20 py-20 px-4 max-w-4xl mx-auto text-white">
         <h2 class="text-2xl md:text-3xl font-semibold mb-12 tracking-wider" style="font-family: 'Great Vibes', cursive;">
-            Susunan Acara
+            Akad Pernikahan
         </h2>
 
         <!-- Grid -->
