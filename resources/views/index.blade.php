@@ -70,7 +70,10 @@
       <a href="/buat-undangan" class="hover:text-pink-400 transition">Buat Undangan</a>
     </nav>
     <div>
-      <a href="/login" class="bg-pink-600 text-white hover:bg-pink-700 py-2 px-4 rounded transition text-sm">Login</a>
+    <a href="{{ route('login') }}" 
+      class="bg-pink-600 text-white hover:bg-pink-700 py-2 px-4 rounded transition text-sm">
+      Login
+    </a>
     </div>
   </div>
 </header>
