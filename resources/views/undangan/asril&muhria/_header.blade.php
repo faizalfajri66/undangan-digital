@@ -1,5 +1,5 @@
 <div class="relative w-full text-center min-h-[90vh] bg-cover bg-center shadow-2xl overflow-hidden flex items-center justify-center"
-     style="background-image: url('{{ asset('assets/asril1.jpg') }}'); background-blend-mode: overlay;">
+     style="background-image: url('{{ asset('assets/asril2.jpg') }}'); background-blend-mode: overlay;">
 
     <!-- Ornamen bunga kanan atas -->
     <img src="{{ asset('assets/flower-icon.png') }}" alt="Floral Decor"
