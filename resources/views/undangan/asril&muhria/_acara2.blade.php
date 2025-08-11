@@ -67,7 +67,7 @@
 
         <div class="text-center mt-4">
             <a 
-                href="https://www.google.com/maps?q=-4.407984194975246,119.60546372883208" 
+                href="https://www.google.com/maps?q=-4.630797257253546,119.58180299868995" 
                 target="_blank"
                 class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-semibold px-5 py-2 rounded-full shadow-md transition"
             >
@@ -84,8 +84,8 @@
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     // Koordinat Lokasi
-    const lat = -4.407984194975246;
-    const lng = 119.60546372883208;
+    const lat = -4.630797257253546;
+    const lng = 119.58180299868995;
 
     // Inisialisasi Map
     const map = L.map('map_2').setView([lat, lng], 16);
