@@ -10,7 +10,7 @@
     <!-- Gambar -->
     <div class="flex justify-center mb-6"
          data-aos="zoom-in" data-aos-delay="400">
-        <img src="{{ asset('assets/asril2.jpg') }}" alt="Count_Down"
+        <img src="{{ asset('assets/asril_countdown.jpg') }}" alt="Count_Down"
              class="w-32 h-32 md:w-40 md:h-40 bg-white rounded-full shadow-lg ring-4 ring-white object-cover" />
     </div>
 
