@@ -17,7 +17,6 @@ Route::get('/', function () {
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-Route::post('/rsvp', [RsvpController::class, 'store'])->name('rsvp.store');
 
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [DataController::class, 'index'])->name('index');
