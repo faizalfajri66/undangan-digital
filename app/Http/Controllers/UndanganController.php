@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 
 class UndanganController extends Controller
 {
+    public function index()
+    {
+        $undangan = Undangan::all(); // atau Undangan::find($id)
+        return view('admin.index', compact('undangan'));
+    }
+    
     public function show($slug, Request $request)
     {
         $undangan = Undangan::where('slug', $slug)->firstOrFail();
@@ -36,11 +42,15 @@ class UndanganController extends Controller
         $undangan = new Undangan();
         $undangan->slug = $request->slug;
         $undangan->nama_pria = $request->nama_pria;
+        $undangan->ayah_pria = $request->ayah_pria;
+        $undangan->ibu_pria = $request->ibu_pria;
+        $undangan->instagram_pria = $request->instagram_pria;
         $undangan->nama_wanita = $request->nama_wanita;
-        $undangan->kata_pengantar = $request->kata_pengantar;
+        $undangan->ayah_wanita = $request->ayah_wanita;
+        $undangan->ibu_wanita = $request->ibu_wanita;
+        $undangan->instagram_wanita = $request->instagram_wanita;
         $undangan->tanggal_acara = $request->tanggal_acara;
         $undangan->lokasi = $request->lokasi;
-        $undangan->link_maps = $request->link_maps;
 
         // Cek apakah memilih dari select
         if ($request->filled('musik_select')) {
@@ -60,7 +70,7 @@ class UndanganController extends Controller
             ]);
         }
 
-        $undangan->save();
+        Undangan::create($request->all());
 
         return redirect()->route('undangan.index')->with('success', 'Undangan berhasil dibuat!');
     }

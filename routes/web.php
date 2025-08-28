@@ -3,15 +3,13 @@
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RsvpController;
+use App\Http\Controllers\Admin\DataController;
 use App\Http\Controllers\UndanganController;
 use App\Http\Controllers\UndanganPublicController;
 use App\Http\Controllers\MusicController;
+use App\Models\Undangan;
 
-Route::get('/dashboard', function () {
-    return view('layout.admin');
-})->middleware('auth');
-
-
+Route::get('/dashboard', [DataController::class, 'index'])->name('admin.index');
 Route::get('/', function () {
     return view('index');
 });
@@ -21,16 +19,19 @@ Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::post('/rsvp', [RsvpController::class, 'store'])->name('rsvp.store');
 
-Route::prefix('admin')->middleware(['auth'])->group(function () {
-    Route::resource('undangan', \App\Http\Controllers\Admin\UndanganController::class);
-    Route::resource('galeri', \App\Http\Controllers\Admin\GaleriController::class);
-    Route::resource('love-story', \App\Http\Controllers\Admin\LoveStoryController::class);
-    Route::resource('ucapan', \App\Http\Controllers\Admin\UcapanController::class);
+Route::resource('admin/undangan', DataController::class);
+Route::get('/undangan', [DataController::class, 'index'])->name('undangan.index');
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/', [DataController::class, 'index'])->name('index');
+    Route::post('/store', [DataController::class, 'store'])->name('store');
+    Route::delete('/{undangan}', [DataController::class, 'destroy'])->name('destroy');
 });
+
+Route::get('undangan', [UndanganController::class, 'index'])->name('undangan.index');
 Route::get('/undangan/{slug}', [UndanganController::class, 'show'])->name('undangan.show');
 Route::post('/rsvp/{slug}', [RsvpController::class, 'store'])->name('rsvp.store');
 Route::get('/admin/rsvp/{slug}', [RsvpController::class, 'index'])->name('rsvp.index');
 Route::get('/music', [MusicController::class, 'index'])->name('music.index');
 Route::post('/music', [MusicController::class, 'store'])->name('music.store');
-Route::get('/admin/create', [UndanganController::class, 'create'])->name('undangan.create');
-
+Route::post('/admin/data', [DataController::class, 'store'])->name('undangan.store');

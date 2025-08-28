@@ -9,31 +9,47 @@ class Undangan extends Model
 {
     use HasFactory;
 
+    protected $table = 'undangans';
+
     protected $fillable = [
-        'slug', 'nama_pria', 'nama_wanita', 'tanggal_acara',
-        'lokasi', 'musik', 'cover', 'template',
-        'quote', 'sumber_quote'
-    ];    
+        'slug',
+        'nama_pria',
+        'nama_wanita',
+        'tanggal_acara',
+        'lokasi',
+        'musik',
+        'cover',
+        'template',
+        'quote',
+        'sumber_quote',
+        'ayah_pria',
+        'ibu_pria',
+        'instagram_pria',
+        'ayah_wanita',
+        'ibu_wanita',
+        'instagram_wanita',
+        'rekening_nama',
+        'rekening_bank',
+        'rekening_nomor',
+        // Hapus 'galeri' kalau galeri pakai tabel relasi
+    ];
 
     protected $casts = [
         'tanggal_acara' => 'datetime',
-        'galeri' => 'array',
+        // 'galeri' => 'array', // Aktifkan hanya jika galeri disimpan di kolom JSON
     ];
 
-    
-    // 🔗 Relasi ke Galeri
+    // Relasi
     public function galeris()
     {
         return $this->hasMany(Galeri::class);
     }
 
-    // 🔗 Relasi ke Ucapan (RSVP)
     public function ucapans()
     {
         return $this->hasMany(Ucapan::class);
     }
 
-    // 🔗 Relasi ke LoveStory
     public function loveStories()
     {
         return $this->hasMany(LoveStory::class);
@@ -48,5 +64,4 @@ class Undangan extends Model
     {
         return $this->hasOne(Music::class);
     }
-
 }

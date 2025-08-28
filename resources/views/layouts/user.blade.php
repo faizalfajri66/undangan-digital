@@ -57,9 +57,8 @@
     {{-- Optional CSS tambahan --}}
     @stack('styles')
 </head>
+
 <body class="overflow-x-hidden">
-    {{-- Navbar --}}
-    @include('admin.navbar')
 
     {{-- Konten Halaman --}}
     @yield('content')
@@ -68,6 +67,7 @@
     @stack('scripts')
     <!-- AOS JS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <script>
         AOS.init({
         duration: 1200,
