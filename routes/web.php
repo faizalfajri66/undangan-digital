@@ -9,7 +9,7 @@ use App\Http\Controllers\UndanganPublicController;
 use App\Http\Controllers\MusicController;
 use App\Models\Undangan;
 
-Route::get('/dashboard', [DataController::class, 'index'])->name('admin.index');
+Route::get('/dashboard', [DataController::class, 'index'])->name('adminn.index');
 Route::get('/', function () {
     return view('index');
 });
@@ -18,9 +18,6 @@ Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::post('/rsvp', [RsvpController::class, 'store'])->name('rsvp.store');
-
-Route::resource('admin/undangan', DataController::class);
-Route::get('/undangan', [DataController::class, 'index'])->name('undangan.index');
 
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [DataController::class, 'index'])->name('index');
